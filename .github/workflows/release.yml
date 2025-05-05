@@ -1,4 +1,4 @@
-name: Release Docker Registry Login Action
+name: Release Action
 
 on:
   workflow_dispatch:
