@@ -1,6 +1,6 @@
 # Docker Registry Login
 
-![Latest Release](https://img.shields.io/github/v/release/p6m-actions/js-repository-login?style=flat-square&label=Latest%20Release&color=blue)
+![Latest Release](https://img.shields.io/github/v/release/p6m-actions/docker-repository-login?style=flat-square&label=Latest%20Release&color=blue)
 
 ## Description
 
@@ -10,7 +10,7 @@ A GitHub Action that simplifies login to Docker container registries. This actio
 
 ```yaml
 - name: Login to Docker Registry
-  uses: p6m-actions/js-repository-login@v1
+  uses: p6m-actions/docker-repository-login@v1
   with:
     registry: your-registry-url # Optional
     username: ${{ secrets.REGISTRY_USERNAME }}
@@ -31,7 +31,7 @@ A GitHub Action that simplifies login to Docker container registries. This actio
 
 ```yaml
 - name: Login to Artifactory Container Registry
-  uses: p6m-actions/js-repository-login@v1
+  uses: p6m-actions/docker-repository-login@v1
   with:
     registry: ${{ vars.ARTIFACTORY_HOSTNAME }}
     username: ${{ secrets.ARTIFACTORY_USERNAME }}
@@ -42,7 +42,7 @@ A GitHub Action that simplifies login to Docker container registries. This actio
 
 ```yaml
 - name: Login to Docker Hub
-  uses: p6m-actions/js-repository-login@v1
+  uses: p6m-actions/docker-repository-login@v1
   with:
     username: ${{ secrets.DOCKERHUB_USERNAME }}
     password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -52,7 +52,7 @@ A GitHub Action that simplifies login to Docker container registries. This actio
 
 ```yaml
 - name: Login to Amazon ECR
-  uses: p6m-actions/js-repository-login@v1
+  uses: p6m-actions/docker-repository-login@v1
   with:
     registry: ${{ env.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com
     username: ${{ secrets.AWS_ACCESS_KEY_ID }}
