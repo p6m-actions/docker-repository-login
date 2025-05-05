@@ -1,0 +1,31 @@
+name: "Docker Registry Login"
+description: "GitHub Action for logging into Docker container registries"
+author: "Jimmie Fulton <jimmie.fulton@gmail.com>"
+
+# Define the inputs for this action
+inputs:
+  registry:
+    description: "Container registry URL"
+    required: false
+  username:
+    description: "Username for registry authentication"
+    required: true
+  password:
+    description: "Password or token for registry authentication"
+    required: true
+
+# Define the runs configuration
+runs:
+  using: "composite"
+  steps:
+    - name: Login to Docker Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ${{ inputs.registry }}
+        username: ${{ inputs.username }}
+        password: ${{ inputs.password }}
+
+# Define the branding for the action in the GitHub Marketplace
+branding:
+  icon: "lock"
+  color: "blue"
