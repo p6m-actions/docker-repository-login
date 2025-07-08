@@ -6,7 +6,7 @@ author: "Jimmie Fulton <jimmie.fulton@gmail.com>"
 inputs:
   registry:
     description: "Container registry URL"
-    required: false
+    required: true
   username:
     description: "Username for registry authentication"
     required: true
