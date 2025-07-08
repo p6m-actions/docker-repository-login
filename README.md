@@ -12,7 +12,7 @@ A GitHub Action that simplifies login to Docker container registries. This actio
 - name: Login to Docker Registry
   uses: p6m-actions/docker-repository-login@v1
   with:
-    registry: your-registry-url # Optional
+    registry: your-registry-url # Required
     username: ${{ secrets.REGISTRY_USERNAME }}
     password: ${{ secrets.REGISTRY_TOKEN }}
 ```
@@ -21,7 +21,7 @@ A GitHub Action that simplifies login to Docker container registries. This actio
 
 | Input    | Description                          | Required | Default    |
 | -------- | ------------------------------------ | -------- | ---------- |
-| registry | Container registry URL               | No       | Docker Hub |
+| registry | Container registry URL               | Yes      | N/A        |
 | username | Username for registry authentication | Yes      | N/A        |
 | password | Password or token for authentication | Yes      | N/A        |
 
@@ -44,6 +44,7 @@ A GitHub Action that simplifies login to Docker container registries. This actio
 - name: Login to Docker Hub
   uses: p6m-actions/docker-repository-login@v1
   with:
+    registry: docker.io
     username: ${{ secrets.DOCKERHUB_USERNAME }}
     password: ${{ secrets.DOCKERHUB_TOKEN }}
 ```
