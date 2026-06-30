@@ -33,9 +33,9 @@ A GitHub Action that simplifies login to Docker container registries. This actio
 - name: Login to Artifactory Container Registry
   uses: p6m-actions/docker-repository-login@v1
   with:
-    registry: ${{ vars.ARTIFACTORY_HOSTNAME }}
-    username: ${{ secrets.ARTIFACTORY_USERNAME }}
-    password: ${{ secrets.ARTIFACTORY_IDENTITY_TOKEN }}
+    registry: ${{ vars.P6M_ARTIFACTORY_HOSTNAME }}
+    username: ${{ secrets.P6M_ARTIFACTORY_USERNAME }}
+    password: ${{ secrets.P6M_ARTIFACTORY_IDENTITY_TOKEN }}
 ```
 
 ### Login to Docker Hub
